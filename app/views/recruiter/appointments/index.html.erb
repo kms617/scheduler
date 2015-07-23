@@ -1,0 +1,11 @@
+<h1>Select a Date</h1>
+<h2>This is the recruiter view </h2>
+
+<%= week_calendar events: @appointments do |date, appointments| %>
+  <%= date %>
+  <% appointments.each do |appointment| %>
+    <div>
+      <%= appointment.location %>
+    </div>
+  <% end %>
+<% end %>

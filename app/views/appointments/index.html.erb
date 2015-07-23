@@ -1,0 +1,9 @@
+<h1>Select a Date</h1>
+<%= week_calendar events: @appointments do |date, appointments| %>
+  <%= date %>
+  <% appointments.each do |appointment| %>
+    <div>
+      <%= appointment.location %>
+    </div>
+  <% end %>
+<% end %>
