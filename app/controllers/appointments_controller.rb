@@ -14,18 +14,18 @@ class AppointmentsController < ApplicationController
     @appointment.recruiter_id = current_user
 
     if @appointment.save
-      redirect_to appointments_path
+      redirect_to recruiter_appointments_path
     else
       render :new
     end
   end
 
   def edit
-    @appointment = Appointment.find_by(params[:id])
+    @appointment = Appointment.find(params[:id])
   end
 
   def update
-    @appointment = Appointment.find_by(params[:id])
+    @appointment = Appointment.find(params[:id])
 
     if @appointment.update(appointment_params)
       redirect_to appointments_path
@@ -35,6 +35,6 @@ class AppointmentsController < ApplicationController
   end
 
   def appointment_params
-    params.require(:appointment).permit(:scheduled_time, :location, :user_id)
+    params.require(:appointment).permit(:user_id)
   end
 end

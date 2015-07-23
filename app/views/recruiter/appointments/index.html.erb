@@ -5,7 +5,7 @@
   <%= date %>
   <% appointments.each do |appointment| %>
     <div>
-      <%= appointment.location %>
+      <%= link_to appointment.location, edit_recruiter_appointment_path(appointment.id) %>
     </div>
   <% end %>
 <% end %>
