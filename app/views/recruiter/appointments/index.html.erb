@@ -1,6 +1,6 @@
-<h1>Select a Date</h1>
-<h2>This is the recruiter view </h2>
-<%= link_to 'Schedule Time', new_appointment_path, class: 'button radius' %>
+<nav class="recruiterbar">
+  <p>Son Trinh | Appointments</p>
+</nav>
 <%= week_calendar events: @appointments do |date, appointments| %>
   <%= date %>
   <% appointments.each do |appointment| %>

@@ -13,10 +13,4 @@ class Appointment < ActiveRecord::Base
       user.formatted_name
     end
   end
-
-#doesn't work yet
-  # def link_to_user(user)
-  #     link_to user.formatted_name,
-  #             /user/user.id
-  # end
 end
