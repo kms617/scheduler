@@ -3,10 +3,16 @@
 <%= week_calendar events: @appointments do |date, appointments| %>
   <%= date %>
   <% appointments.each do |appointment| %>
-    <div>
-      <span>
-        <%= link_to appointment.location %>
-        <%= render partial: 'appointments/booked', locals: { appointment: appointment, user: current_user } %>
-    </div>
+    <%= simple_form_for [appointment], method: :patch do |f| %>
+      <%= f.hidden_field :user_id, user_id: current_user.id %>
+        <% if appointment.user == current_user %>
+          <% appointment.user = nil %>
+          <% appointment.save %>
+        <% else %>
+          <% appointment.user = current_user %>
+          <% appointment.save %>
+        <% end %>
+      <%= f.submit appointment.location %>
+    <% end %>
   <% end %>
 <% end %>

@@ -1,0 +1,8 @@
+<%= form_for [appointment] do |f| %>
+      <%= f.hidden_field :user %>
+        <% if appointment.user == user %>
+          <% appointment.user = nil %>
+        <% else %>
+          <% appointment.user = user %>
+        <% end %>
+    <% end %>
