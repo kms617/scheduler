@@ -9,3 +9,51 @@
 
 @import "topbar";
 @import "recruiterbar";
+
+div.appointment {
+  background-color: #53A4EF;
+  height: 100px;
+  padding: 20px;
+  margin: 10px 5px 5px 2px;
+  border-radius: 1%;
+}
+div.calendar {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  height: 100%;
+  background-color: #BBE4F9;
+  border-radius: 1%;
+  padding: 10px;
+}
+header.calendar-header {
+  a {
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
+table {
+  th, tr {
+    text-align: center;
+  }
+  td {
+    vertical-align: top;
+  }
+
+  hr {
+    margin: 0;
+    border-color: #0B425E;
+  }
+
+  .date {
+    background-color: #1CA5EC;
+    padding: 2px;
+    margin: 5px 5px 5px 2px;
+    border-radius: 1%;
+    color: #FFFFFF;
+  }
+}

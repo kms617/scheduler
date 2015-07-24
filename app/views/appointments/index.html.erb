@@ -1,16 +1,22 @@
-<%= week_calendar events: @appointments do |date, appointments| %>
-  <%= date %>
+<%= calendar number_of_days: 3, events: @appointments do |date, appointments| %>
+  <div class="date">
+    <%= date.strftime("%B %d, %Y") %>
+  </div>
   <% appointments.each do |appointment| %>
-    <%= simple_form_for [appointment], method: :patch do |f| %>
-      <%= f.hidden_field :user_id, user_id: current_user.id %>
-        <% if appointment.user == current_user %>
-          <% appointment.user = nil %>
-          <% appointment.save %>
-        <% else %>
-          <% appointment.user = current_user %>
-          <% appointment.save %>
-        <% end %>
-      <%= f.submit appointment.location %>
-    <% end %>
+    <div class="appointment">
+      <%= simple_form_for [appointment], method: :patch do |f| %>
+        <%= appointment.scheduled_time.strftime("%l:%m %P") %>
+        <br>
+        <%= f.hidden_field :user_id, user_id: current_user.id %>
+          <% if appointment.user == current_user %>
+            <% appointment.user = nil %>
+            <% appointment.save %>
+          <% else %>
+            <% appointment.user = current_user %>
+            <% appointment.save %>
+          <% end %>
+        <%= f.submit appointment.location %>
+      <% end %>
+    </div>
   <% end %>
 <% end %>

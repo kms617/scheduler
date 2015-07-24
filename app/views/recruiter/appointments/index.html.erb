@@ -1,11 +1,20 @@
 <nav class="recruiterbar">
-  <p>Son Trinh | Appointments</p>
+  <%= link_to "Son Trinh | Appointments", appointments_path %>
 </nav>
-<%= week_calendar events: @appointments do |date, appointments| %>
-  <%= date %>
+<div class="calendar">
+<%=calendar number_of_days: 3,  events: @appointments do |date, appointments| %>
+  <div class="date">
+    <%= date.strftime("%B %d, %Y") %>
+  </div>
+  <hr>
   <% appointments.each do |appointment| %>
-    <div>
+    <div class="appointment">
+        <%= appointment.scheduled_time.strftime("%l:%m %P") %>
+      <br>
+      <%= appointment.location %>
+      <br>
       <%= appointment.availability %>
     </div>
   <% end %>
 <% end %>
+</div>
