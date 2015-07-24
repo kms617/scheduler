@@ -12,4 +12,12 @@ class User < ActiveRecord::Base
   def formatted_name
     "#{first_name} #{last_name}"
   end
+
+  def stats
+    "#{degree} | #{major} | #{year}"
+  end
+
+  def recruiter_view
+    formatted_name + "\n" + stats
+  end
 end

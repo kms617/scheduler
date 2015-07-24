@@ -10,7 +10,7 @@ class Appointment < ActiveRecord::Base
     if user == nil
       "Available"
     else
-      user.formatted_name
+      user.recruiter_view
     end
   end
 end
