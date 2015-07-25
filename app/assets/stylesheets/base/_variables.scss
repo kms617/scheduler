@@ -1,5 +1,9 @@
 // Typography
-$base-font-family: $helvetica;
+$bullhornPath: '../OpenSans-Regular.woff' format('woff');
+$bullhorn: 'bullhorn', $helvetica;
+$sans-serif: $bullhorn;
+$serif: $georgia;
+$base-font-family: $sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes

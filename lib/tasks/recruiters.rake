@@ -24,7 +24,7 @@ namespace :data do
       end
 
       def create
-        recruiter = Recruiter.save(email: @attrs[:email],
+        recruiter = Recruiter.create(email: @attrs[:email],
                                  password: @attrs[:password],
                                  password_confirmation: @attrs[:password],
                                  first_name: @attrs[:first_name],

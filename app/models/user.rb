@@ -16,8 +16,4 @@ class User < ActiveRecord::Base
   def stats
     "#{degree} | #{major} | #{year}"
   end
-
-  def recruiter_view
-    formatted_name + "\n" + stats
-  end
 end

@@ -29,7 +29,7 @@ namespace :data do
                                  password_confirmation: @attrs[:password],
                                  first_name: @attrs[:first_name],
                                  last_name: @attrs[:last_name],
-                                 degree: @attrs[:degreee],
+                                 degree: @attrs[:degree],
                                  year: @attrs[:year],
                                  major: @attrs[:major])
         user

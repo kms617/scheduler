@@ -9,32 +9,11 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
   end
 
-  def create
-    @appointment = Appointment.new(appointment_params)
-    @appointment.recruiter_id = current_user
-
-    if @appointment.save
-      redirect_to recruiter_appointments_path
-    else
-      render :new
-    end
-  end
-
-  def edit
-    @appointment = Appointment.find(params[:id])
-  end
-
-  def update
-    @appointment = Appointment.find(params[:id])
-
-    if @appointment.update(appointment_params)
-      redirect_to appointments_path
-    else
-      render :new
-    end
-  end
-
   def appointment_params
     params.require(:appointment).permit(:user_id)
+  end
+
+  def user_params
+    params.require(:user).permit(:password, :password_confirmation, :first_name, :last_name)
   end
 end

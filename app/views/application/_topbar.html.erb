@@ -3,3 +3,13 @@
     <%= image_tag('microsoft.png') %>
   <% end %>
 </nav>
+
+---
+<nav class="topbar">
+  <%= link_to recruiter_appointments_path do %>
+    <%= image_tag('microsoft.png') %>
+  <% end %>
+</nav>
+<div class="candidatebar">
+  <p><%=link_to 'Sign In', new_user_session_path %> or click on an appointment to schedule.</p>
+</div>

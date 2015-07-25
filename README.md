@@ -1,3 +1,10 @@
+TO DO
+[] use Bullhorn Font
+[] pop ups for scheduling
+[] change color for available/not available
+[] adjust color & weight
+[] deploy to heroku and put into an iFrame on BH
+
 # Uni-scheduler
 
 ## Getting Started

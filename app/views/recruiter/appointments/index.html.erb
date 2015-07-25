@@ -1,18 +1,25 @@
-<nav class="recruiterbar">
-  <%= link_to "Melanie Mosquera | Appointments", appointments_path %>
-</nav>
-<div class="calendar">
-<%=calendar number_of_days: 3,  events: @appointments do |date, appointments| %>
+<div class="recruiter_calendar">
+<%=calendar number_of_days: 5,  events: @appointments do |date, appointments| %>
   <div class="date">
     <%= date.strftime("%B %d, %Y") %>
   </div>
   <hr>
   <% appointments.each do |appointment| %>
-    <div class="appointment">
-      <%= appointment.scheduled_time.strftime("%l:%m %P") %>
-      <br>
-      <%= appointment.availability %>
-    </div>
+    <% if appointment.user %>
+      <div class="recruiter_booked_appointment">
+        <%= appointment.scheduled_time.strftime("%l:%M %P") %>
+        <br>
+        <strong><%= appointment.availability %></strong>
+        <br>
+        <%= appointment.info %>
+      </div>
+    <% else %>
+      <div class="recruiter_available_appointment">
+        <%= appointment.scheduled_time.strftime("%l:%M %P") %>
+        <br>
+        <p>No One Scheduled</p>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
 </div>

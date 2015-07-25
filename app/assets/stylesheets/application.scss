@@ -10,25 +10,116 @@
 @import "topbar";
 @import "recruiterbar";
 
-div.appointment {
-  background-color: #53A4EF;
+@font-face {
+  font-family: bullhorn;
+  src: url('../fonts/OpenSans-Regular.woff') format('woff');
+}
+
+body {
+  color: #222222;
+}
+
+div.candidatebar {
+  position: fixed;
+  margin-top: 49px;
+  margin-left: 0.8em;
+  width: 700px;
+  background-color: #048F05;
+  height: 30px;
+  padding-top: 5px;
+
+  a {
+    color: #FFFFFF;
+    margin-left: 1em;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  p {
+    color: #FFFFFF;
+  }
+}
+
+div.candidate {
+  font-family: Arial;
+}
+
+div.candidate-calendar {
+  max-width: 705px;
+  background-color: #FFFFFF;
+  margin-left: 3em;
+  margin-right: 3em;
+
+  p {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  a {
+    color: #FFFFFF;
+  }
+}
+
+div.booked_appointment {
+  background-color: #5D39B5;
+  height: 150px;
+  padding: 40px;
+  margin: 10px 15px 15px 12px;
+}
+
+div.available_appointment {
+  background-color: #81C9F6;
+  height: 150px;
+  padding: 40px;
+  margin: 10px 15px 15px 12px;
+}
+
+div.recruiter_booked_appointment {
+  background-color: #F4F4F4;
+  border-style: solid;
+  border-color: #FFAA44;
+  border-width: thick;
   height: 100px;
-  padding: 20px;
+  padding: 10px;
+  margin: 10px 5px 5px 2px;
+  border-radius: 3%;
+  font-size: 0.8em;
+}
+
+div.recruiter_available_appointment {
+  background-color: #f4f4f4f;
+  border-style: solid;
+  border-color: #f4f4f4;
+  border-width: thick;
+  height: 100px;
+  padding: 10px;
   margin: 10px 5px 5px 2px;
   border-radius: 1%;
+  font-size: 0.8em;
 }
+
 div.calendar {
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 20px;
   height: 100%;
   background-color: #BBE4F9;
   border-radius: 1%;
   padding: 10px;
 }
+
+div.recruiter_calendar {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  height: 100%;
+  border-radius: 1%;
+  padding: 0px;
+}
+
 header.calendar-header {
   a {
     font-size: 30px;
+    color: #2F384F;
   }
 
   span {
@@ -39,20 +130,28 @@ header.calendar-header {
 table {
   th, tr {
     text-align: center;
+    padding: 0;
   }
   td {
-    vertical-align: top;
+    vertical-align: center;
   }
 
   hr {
     margin: 0;
-    border-color: #0B425E;
   }
 
   .date {
-    background-color: #1CA5EC;
+    background-color: #2F384F;
     padding: 2px;
     margin: 5px 5px 5px 2px;
+    border-radius: 1%;
+    color: #FFFFFF;
+  }
+
+  .candidate_date {
+    background-color: #C43C8B;
+    padding: 2px;
+    margin: 5px 15px 15px 5px;
     border-radius: 1%;
     color: #FFFFFF;
   }
