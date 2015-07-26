@@ -1,21 +1,27 @@
-<div class="candidate">
-<div class="candidate-calendar">
-<%= calendar number_of_days: 3, events: @appointments do |date, appointments| %>
-  <div class="candidate_date">
-    <%= date.strftime("%B %d, %Y") %>
-  </div>
-  <% appointments.each do |appointment| %>
-      <% if appointment.booked? %>
-        <div class="booked_appointment">
-        <p>Booked - Unavailable</p>
-        </div>
-      <% else %>
-        <div class="available_appointment">
-        <p><%= appointment.scheduled_time.strftime("%l:%M %P") %>
-        <%= link_to "Available", new_appointment_path %></p>
-        </div>
-      <% end %>
+<nav class="topbar">
+  <%= link_to recruiter_appointments_path do %>
+    <%= image_tag('microsoft.png') %>
   <% end %>
-<% end %>
-</div>
+</nav>
+<div class="candidate">
+  <div class="candidate-calendar">
+    <%= calendar number_of_days: 3, events: @appointments do |date, appointments| %>
+    <div class="candidate_date">
+      <%= date.strftime("%B %d, %Y") %>
+    </div>
+      <% appointments.each do |appointment| %>
+        <% if appointment.booked? %>
+          <div class="booked_appointment">
+            <p><%= appointment.scheduled_time.strftime("%l:%M %P") %>
+              Unavailable</p>
+          </div>
+        <% else %>
+          <div class="available_appointment">
+            <p><%= appointment.scheduled_time.strftime("%l:%M %P") %>
+            <%= link_to "Available", new_appointment_path %></p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>

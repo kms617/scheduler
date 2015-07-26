@@ -8,7 +8,6 @@
 @import "refills/flashes";
 
 @import "topbar";
-@import "recruiterbar";
 
 @font-face {
   font-family: bullhorn;
@@ -19,59 +18,89 @@ body {
   color: #222222;
 }
 
-div.candidatebar {
-  position: fixed;
-  margin-top: 49px;
-  margin-left: 0.8em;
-  width: 700px;
-  background-color: #048F05;
-  height: 30px;
-  padding-top: 5px;
-
+header.calendar-header {
   a {
-    color: #FFFFFF;
-    margin-left: 1em;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 30px;
+    color: #2F384F;
   }
 
-  p {
-    color: #FFFFFF;
+  span {
+    font-size: 30px;
+  }
+}
+
+table {
+  th, tr {
+    text-align: center;
+    padding: 0;
+  }
+  td {
+    vertical-align: center;
+  }
+
+  hr {
+    margin: 0;
   }
 }
 
 div.candidate {
-  font-family: Arial;
+  font-family: Helvetica;
+  background-color: #f4f4f4f;
 }
 
 div.candidate-calendar {
   max-width: 705px;
-  background-color: #FFFFFF;
   margin-left: 3em;
   margin-right: 3em;
 
   p {
-    color: #FFFFFF;
-    font-weight: 600;
+    color: #f4f4f4;
+    font-size: 20px;
   }
 
   a {
+    color: #f4f4f4;
+  }
+
+  .date {
+    background-color: #2F384F;
+    padding: 2px;
+    margin: 5px 5px 5px 2px;
+    border-radius: 1%;
     color: #FFFFFF;
+  }
+
+  .candidate_date {
+    background-color: #0239B8;
+    padding: 2px;
+    margin: 5px 15px 15px 12px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: Helvetica;
   }
 }
 
 div.booked_appointment {
-  background-color: #5D39B5;
   height: 150px;
   padding: 40px;
   margin: 10px 15px 15px 12px;
+  background-color: #6996FF;
 }
 
 div.available_appointment {
-  background-color: #81C9F6;
   height: 150px;
   padding: 40px;
   margin: 10px 15px 15px 12px;
+  background-color: #195EFE;
+}
+
+div.calendar {
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 100%;
+  background-color: #BBE4F9;
+  border-radius: 1%;
+  padding: 10px;
 }
 
 div.recruiter_booked_appointment {
@@ -98,15 +127,6 @@ div.recruiter_available_appointment {
   font-size: 0.8em;
 }
 
-div.calendar {
-  margin-left: 40px;
-  margin-right: 40px;
-  height: 100%;
-  background-color: #BBE4F9;
-  border-radius: 1%;
-  padding: 10px;
-}
-
 div.recruiter_calendar {
   margin-left: 40px;
   margin-right: 40px;
@@ -114,45 +134,4 @@ div.recruiter_calendar {
   height: 100%;
   border-radius: 1%;
   padding: 0px;
-}
-
-header.calendar-header {
-  a {
-    font-size: 30px;
-    color: #2F384F;
-  }
-
-  span {
-    font-size: 30px;
-  }
-}
-
-table {
-  th, tr {
-    text-align: center;
-    padding: 0;
-  }
-  td {
-    vertical-align: center;
-  }
-
-  hr {
-    margin: 0;
-  }
-
-  .date {
-    background-color: #2F384F;
-    padding: 2px;
-    margin: 5px 5px 5px 2px;
-    border-radius: 1%;
-    color: #FFFFFF;
-  }
-
-  .candidate_date {
-    background-color: #C43C8B;
-    padding: 2px;
-    margin: 5px 15px 15px 5px;
-    border-radius: 1%;
-    color: #FFFFFF;
-  }
 }
