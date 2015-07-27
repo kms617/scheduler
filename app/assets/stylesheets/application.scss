@@ -199,4 +199,29 @@ body.devise-registrations.devise-registrations-new {
 
 .appointments-edit {
   padding: 20%;
+  div.content {
+    @include span-columns(12);
+
+    .logo {
+      @include span-columns(2 of 12);
+    }
+
+    .message {
+      @include span-columns(10 of 12);
+      margin-top: 20px;
+
+      h1 {
+        font-size: 2em;
+        color: #04A4EF;
+      }
+
+      a {
+        color: #04A4EF;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
 }
