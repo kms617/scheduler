@@ -1,5 +1,5 @@
 class AddAssociationUsersAppointments < ActiveRecord::Migration
   def change
-    add_column :appointments, :user_id, :integer
+    add_column :users, :appointment_id, :integer
   end
 end

@@ -13,9 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-function show_appointment_booking(int appointment.id) {
-  $('appointments_booking').show();
-  win = new Window({title: "Book this Appointment", width:200, height:150, destroyOnClose: true, recenterAuto:false});
-  win.setContent('appointments_booking',true,true);
-  win.show();
-}
+$('#div.id').html("<%= render :partial => 'book' %>");

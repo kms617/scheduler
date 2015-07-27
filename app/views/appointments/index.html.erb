@@ -21,7 +21,7 @@
           <div class="available_appointment">
             <p><%= appointment.scheduled_time.strftime("%l:%M %P") %></p>
             <% if !current_user %>
-              <%=  link_to 'Available', new_user_registration_path %>
+              <%=  link_to 'Available', new_user_appointment_registration_path(appointment) %>
             <% else %>
               <%= link_to 'Available', edit_appointment_path(appointment) %>
             <% end %>

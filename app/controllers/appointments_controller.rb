@@ -14,9 +14,13 @@ class AppointmentsController < ApplicationController
   end
 
   def update
-    @appointment = Appointment.find(params[:id])
+    appointment = Appointment.find(params[:id])
+    @appointment = appointment
     @appointment.update(appointment_params)
     @appointment.save
+    user = current_user
+    UserMailer.booking_email(user, appointment).deliver
+    respond_with(appointment)
     redirect_to appointments_path
   end
 

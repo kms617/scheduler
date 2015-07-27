@@ -15,8 +15,7 @@
     <%= f.input :year, required: true %>
     <%= f.input :email, required: true, autofocus: true %>
   </div>
-
   <div class="form-actions">
-    <%= f.button :submit, "Book It!" %>
+    <%= link_to (f.button :submit, "Book It!"), book_appointment_path, :remote => true %>
   </div>
 <% end %>

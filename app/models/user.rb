@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :appointments
+  has_one :appointment
   validates :email, presence: true, uniqueness: true, email: true
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -22,6 +22,6 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
-  false
+    false
   end
 end
