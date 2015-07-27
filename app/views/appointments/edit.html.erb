@@ -1,13 +1,10 @@
-<h2> Appointment Confirmation </h2>
-<%= link_to 'Go Back', appointments_path %>
-<p><%= @appointment.scheduled_time %> in <%= @appointment.location %></p>
-
 <%= simple_form_for @appointment, method: :patch do |f| %>
-  <%= f.hidden_field :user_id, user_id: current_user.id %>
-    <% if @appointment.user == current_user %>
-      <% @appointment.user = nil %>
-    <% else %>
+  <%= f.hidden_field :booked, booked: @appointment.booked %>
+      <% @appointment.booked = true %>
       <% @appointment.user = current_user %>
-    <% end %>
-  <%= f.submit 'Book' %>
+      <% @appointment.save %>
+      <h1>It's yours!</h1>
+      <p><%= @appointment.scheduled_time.strftime("%A, %B %d")%>th at  <%@appointment.scheduled_time.strftime("%l:%M% P")%>
+        has been booked for you!</p>
 <% end %>
+<%= link_to "Return to Schedule", appointments_path %>

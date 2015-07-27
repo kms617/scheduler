@@ -1,8 +1,10 @@
 <nav class="topbar">
-  <%= link_to recruiter_appointments_path do %>
-    <%= image_tag('microsoft.png') %>
-  <% end %>
+  <%= image_tag('microsoft.png') %>
 </nav>
+<div class="candidatebar">
+  <a><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %>
+    <%= link_to('Log In', new_user_session_path) %></a>
+</div>
 <div class="candidate">
   <div class="candidate-calendar">
     <%= calendar number_of_days: 3, events: @appointments do |date, appointments| %>
@@ -17,8 +19,12 @@
           </div>
         <% else %>
           <div class="available_appointment">
-            <p><%= appointment.scheduled_time.strftime("%l:%M %P") %>
-            <%= link_to "Available", new_appointment_path %></p>
+            <p><%= appointment.scheduled_time.strftime("%l:%M %P") %></p>
+            <% if !current_user %>
+              <%=  link_to 'Available', new_user_registration_path %>
+            <% else %>
+              <%= link_to 'Available', edit_appointment_path(appointment) %>
+            <% end %>
           </div>
         <% end %>
       <% end %>

@@ -6,13 +6,13 @@
   <hr>
   <% appointments.each do |appointment| %>
     <% if appointment.user %>
-      <div class="recruiter_booked_appointment">
+      <a href= appointment.bullhorn_link ><div class="recruiter_booked_appointment">
         <%= appointment.scheduled_time.strftime("%l:%M %P") %>
         <br>
         <strong><%= appointment.availability %></strong>
         <br>
         <%= appointment.info %>
-      </div>
+      </div></a>
     <% else %>
       <div class="recruiter_available_appointment">
         <%= appointment.scheduled_time.strftime("%l:%M %P") %>

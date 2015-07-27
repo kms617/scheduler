@@ -6,10 +6,12 @@
     <%= f.input :first_name, required: true, prompt: "Harry" %>
     <%= f.input :last_name, required: true, prompt: "Husky" %>
     <%= f.input :degree do %>
-      <%= form.select :degree, [BS, BE, MBA] %>
+      <%= f.select :degree, [BS, BE, MBA] %>
     <% end %>
     <%= f.input :major, required: true, prompt: "Computer Science" %>
     <%= f.input :year, required: true, prompt: "2015" %>
+    <%= f.input :password, required: true %>
+    <%= f.input :password_confirmation, required: true %>
   </div>
 
   <div class="form-actions">

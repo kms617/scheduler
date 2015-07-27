@@ -4,8 +4,14 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :first_name
-    devise_parameter_sanitizer.for(:sign_up) << :last_name
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email,
+                                                            :password,
+                                                            :password_confirmation,
+                                                            :first_name,
+                                                            :last_name,
+                                                            :major,
+                                                            :year,
+                                                            :degree) }
   end
 
   protect_from_forgery with: :exception

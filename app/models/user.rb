@@ -16,4 +16,12 @@ class User < ActiveRecord::Base
   def stats
     "#{degree} | #{major} | #{year}"
   end
+
+  def bullhorn_address
+    "https://cls2.bullhornstaffing.com/BullhornSTAFFING/OpenWindow.cfm?Entity=Candidate&ID=#{bullhorn_id}"
+  end
+
+  def password_required?
+  false
+  end
 end

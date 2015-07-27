@@ -17,4 +17,20 @@ class Appointment < ActiveRecord::Base
   def info
     user.stats
   end
+
+  def message
+    "Book an appointment at #{scheduled_time.strftime("%l:%M %P")} in #{location}?"
+  end
+
+  def user_name
+    user.first_name
+  end
+
+  def user_email
+    user.email
+  end
+
+  def bullhorn_link
+    user.bullhorn_address
+  end
 end
