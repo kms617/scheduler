@@ -30,7 +30,7 @@ class Appointment < ActiveRecord::Base
     user.email
   end
 
-  def bullhorn_link
-    user.bullhorn_address
+  def candidateurl
+    "https://cls2.bullhornstaffing.com/BullhornSTAFFING/OpenWindow.cfm?Entity=Candidate&ID=4800477"
   end
 end

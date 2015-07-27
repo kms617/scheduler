@@ -16,7 +16,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module UniScheduler
+module AppointmentFair
   class Application < Rails::Application
     config.i18n.enforce_available_locales = true
 
@@ -44,8 +44,8 @@ module UniScheduler
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.assets.initialize_on_precompile = false
     config.active_record.raise_in_transactional_callbacks = true
-
     config.active_job.queue_adapter = :delayed_job
   end
 end

@@ -6,7 +6,7 @@
   <hr>
   <% appointments.each do |appointment| %>
     <% if appointment.user %>
-      <a href= appointment.bullhorn_link ><div class="recruiter_booked_appointment">
+      <a href= "https://cls2.bullhornstaffing.com/BullhornSTAFFING/OpenWindow.cfm?Entity=Candidate&ID=4800550"><div class="recruiter_booked_appointment">
         <%= appointment.scheduled_time.strftime("%l:%M %P") %>
         <br>
         <strong><%= appointment.availability %></strong>

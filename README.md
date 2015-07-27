@@ -3,7 +3,7 @@ TO DO
 [] pop ups for scheduling
 [] deploy to heroku and put into an iFrame on BH
 
-# Uni-scheduler
+# appointment-fair
 
 ## Getting Started
 

@@ -1,12 +1,18 @@
 development: &default
   adapter: postgresql
-  database: uni-scheduler_development
   encoding: utf8
-  host: localhost
-  min_messages: warning
   pool: 2
-  timeout: 5000
+
+development:
+  <<: *default
+  database: appointment-fair_development
 
 test:
   <<: *default
-  database: uni-scheduler_test
+  database: appointment-fair_test
+
+production:
+  <<: *default
+  database: appointment-fair_production
+  username: appointment-fair
+  password: <%= ENV['APPOINTMENT-FAIR_DATABASE_PASSWORD'] %>

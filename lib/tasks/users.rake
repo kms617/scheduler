@@ -31,7 +31,8 @@ namespace :data do
                                  last_name: @attrs[:last_name],
                                  degree: @attrs[:degree],
                                  year: @attrs[:year],
-                                 major: @attrs[:major])
+                                 major: @attrs[:major],
+                                 bullhornid: @attrs[:bullhornid])
         user
       end
     end

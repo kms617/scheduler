@@ -1,3 +1,7 @@
+<nav class="topbar">
+  <%= image_tag('microsoft.png') %>
+</nav>
+<div class ="form">
 <h2>Let's Meet :)</h2>
 <h3>Tell us a little about yourself first.</h3>
 
@@ -16,6 +20,7 @@
     <%= f.input :email, required: true, autofocus: true %>
   </div>
   <div class="form-actions">
-    <%= link_to (f.button :submit, "Book It!"), book_appointment_path, :remote => true %>
+    <%= link_to (f.button :submit, "Book It!") %>
   </div>
 <% end %>
+</div>

@@ -6,6 +6,7 @@ class CreateAppointments < ActiveRecord::Migration
       t.string :location
       t.boolean :booked, null: false, default: false
       t.integer :recruiter_id
+      t.integer :user_id
     end
   end
 end

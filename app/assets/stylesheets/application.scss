@@ -136,6 +136,10 @@ div.recruiter_calendar {
   height: 100%;
   border-radius: 1%;
   padding: 0px;
+
+  a {
+    color: #222222;
+  }
 }
 
 body.devise-sessions.devise-sessions-new {
@@ -144,8 +148,15 @@ body.devise-sessions.devise-sessions-new {
 }
 
 body.devise-registrations.devise-registrations-new {
-  padding: 15%;
-  font-family: Arial;
+  div.form {
+    padding: 10% 10% 10% 15%;
+    font-family: Arial;
+    max-width: 750px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
 
   div.content {
     @include span-columns(12);
