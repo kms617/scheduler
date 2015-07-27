@@ -47,7 +47,7 @@ table {
 
 div.candidate {
   font-family: Helvetica;
-  background-color: #f4f4f4f;
+  background-color: #f4f4f4;
 }
 
 div.candidate-calendar {
@@ -119,7 +119,7 @@ div.recruiter_booked_appointment {
 }
 
 div.recruiter_available_appointment {
-  background-color: #f4f4f4f;
+  background-color: #f4f4f4;
   border-style: solid;
   border-color: #f4f4f4;
   border-width: thick;
@@ -199,6 +199,7 @@ body.devise-registrations.devise-registrations-new {
 
 .appointments-edit {
   padding: 20%;
+
   div.content {
     @include span-columns(12);
 
