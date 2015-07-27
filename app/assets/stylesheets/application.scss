@@ -15,6 +15,10 @@
   src: url('../fonts/OpenSans-Regular.woff') format('woff');
 }
 
+div.container {
+  @include outer-container;
+}
+
 body {
   color: #222222;
 }
