@@ -20,6 +20,7 @@ body {
 }
 
 header.calendar-header {
+
   a {
     font-size: 30px;
     color: #2F384F;
@@ -75,7 +76,7 @@ div.candidate-calendar {
   .candidate_date {
     background-color: #0239B8;
     padding: 2px;
-    margin: 5px 15px 15px 12px;
+    margin: 50px 15px 15px 12px;
     color: #FFFFFF;
     font-size: 18px;
     font-family: Helvetica;
@@ -143,8 +144,27 @@ div.recruiter_calendar {
 }
 
 body.devise-sessions.devise-sessions-new {
-  padding: 15%;
-  font-family: Arial;
+  div.form{
+
+    padding: 15%;
+    font-family: Arial;
+
+    input.btn {
+      background-color: #427BFF;
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+
+    a {
+      color: #427BFF;
+    }
+
+    h2 {
+      margin-top: 50px;
+      color: #427BFF;
+      font-size: 2em;
+    }
+  }
 }
 
 body.devise-registrations.devise-registrations-new {
@@ -163,12 +183,17 @@ body.devise-registrations.devise-registrations-new {
   }
 
   h2 {
+    margin-top: 100px;
     font-size: 2em;
-    color: #477DCA;
+    color: #427BFF;
   }
 
   div.form-actions {
     margin-bottom: 15px;
+  }
+
+  input.btn {
+    background-color: #427BFF;
   }
 }
 
