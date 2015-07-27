@@ -87,8 +87,8 @@ Rails.application.configure do
   #config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
 
   #config.action_mailer.default_options = {
-   from: "no-reply@#{ENV["HOST"]}"
- }
+  # from: "no-reply@#{ENV["HOST"]}"
+ #}
 
  #config.action_mailer.delivery_method = :smtp
  #config.action_mailer.smtp_settings = {
