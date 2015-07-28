@@ -89,6 +89,6 @@ Rails.application.configure do
   #config.action_mailer.default_options = {
   # from: "no-reply@#{ENV["HOST"]}"
 
-  config.secret_key_base = ENV[“SECRET_KEY_BASE”]
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
 end
 # Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
