@@ -11,5 +11,5 @@
       <p>We've reserved <%= @appointment.scheduled_time.strftime("%B %d")%>th at  <%=@appointment.scheduled_time.strftime("%l:%M %P")%>
         <br>just for you.</p>
 <% end %>
-<%= link_to "Return to Schedule", appointments_path %>
+<%= link_to "Return to Schedule", destroy_user_session_path, method: :delete %>
 </div>
