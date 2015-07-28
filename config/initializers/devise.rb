@@ -13,7 +13,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'scheduler@scheduler.com'
-
+  config.action_dispatch.default_headers = { 'X-Frame-Options' => 'ALLOWALL' }
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
