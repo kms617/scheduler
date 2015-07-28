@@ -3,6 +3,9 @@ TO DO
 [] pop ups for scheduling
 [] deploy to heroku and put into an iFrame on BH
 
+App requires Qt for Capybara-webkit to run.
+Run `brew install qt --build-from-source`
+
 # appointment-fair
 
 ## Getting Started

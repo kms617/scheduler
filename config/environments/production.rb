@@ -90,5 +90,7 @@ Rails.application.configure do
   # from: "no-reply@#{ENV["HOST"]}"
 
   config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
+  config.action_dispatch.default_headers = { 'X-Frame-Options' => 'ALLOWALL' }
 end
 # Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
