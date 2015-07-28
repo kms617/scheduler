@@ -1,0 +1,29 @@
+body.devise-registrations.devise-registrations-new {
+  div.form {
+    padding: 10% 10% 10% 15%;
+    font-family: Arial;
+    max-width: 750px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  div.content {
+    @include span-columns(12);
+  }
+
+  h2 {
+    margin-top: 100px;
+    font-size: 2em;
+    color: #427BFF;
+  }
+
+  div.form-actions {
+    margin-bottom: 15px;
+  }
+
+  input.btn {
+    background-color: #427BFF;
+  }
+}

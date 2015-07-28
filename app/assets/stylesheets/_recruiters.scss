@@ -1,0 +1,42 @@
+@font-face {
+  font-family: bullhorn;
+  src: url('../fonts/OpenSans-Regular.woff') format('woff');
+}
+
+
+div.recruiter_calendar {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  height: 100%;
+  border-radius: 1%;
+  padding: 0px;
+
+  a {
+    color: #222222;
+  }
+}
+
+div.recruiter_booked_appointment {
+  background-color: #F4F4F4;
+  border-style: solid;
+  border-color: #FFAA44;
+  border-width: thick;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 5px 5px 2px;
+  border-radius: 3%;
+  font-size: 0.8em;
+}
+
+div.recruiter_available_appointment {
+  background-color: #f4f4f4;
+  border-style: solid;
+  border-color: #f4f4f4;
+  border-width: thick;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 5px 5px 2px;
+  border-radius: 1%;
+  font-size: 0.8em;
+}

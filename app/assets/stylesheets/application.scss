@@ -1,19 +1,18 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "normalize-rails";
-@import "bourbon";
-@import "base/grid-settings";
-@import "neat";
-@import "base/base";
-@import "refills/flashes";
+@import 'normalize-rails';
+@import 'bourbon';
+@import 'base/grid-settings';
+@import 'neat';
+@import 'base/base';
+@import 'refills/flashes';
 
-@import "topbar";
-@import "candidatebar";
-
-@font-face {
-  font-family: bullhorn;
-  src: url('../fonts/OpenSans-Regular.woff') format('woff');
-}
+@import 'topbar';
+@import 'candidatebar';
+@import 'appointments';
+@import 'candidates';
+@import 'recruiters';
+@import 'registrations';
 
 div.container {
   @include outer-container;
@@ -46,194 +45,5 @@ table {
 
   hr {
     margin: 0;
-  }
-}
-
-div.candidate {
-  font-family: Helvetica;
-  background-color: #f4f4f4;
-}
-
-div.candidate-calendar {
-  max-width: 705px;
-  margin-left: 3em;
-  margin-right: 3em;
-
-  p {
-    color: #f4f4f4;
-    font-size: 20px;
-  }
-
-  a {
-    color: #f4f4f4;
-    font-size: 20px;
-  }
-
-  .date {
-    background-color: #2F384F;
-    padding: 2px;
-    margin: 5px 5px 5px 2px;
-    border-radius: 1%;
-    color: #FFFFFF;
-  }
-
-  .candidate_date {
-    background-color: #0239B8;
-    padding: 2px;
-    margin: 50px 15px 15px 12px;
-    color: #FFFFFF;
-    font-size: 18px;
-    font-family: Helvetica;
-  }
-}
-
-div.booked_appointment {
-  height: 150px;
-  padding: 40px;
-  margin: 10px 15px 15px 12px;
-  background-color: #6996FF;
-}
-
-div.available_appointment {
-  height: 150px;
-  padding: 40px;
-  margin: 10px 15px 15px 12px;
-  background-color: #195EFE;
-}
-
-div.calendar {
-  margin-left: 40px;
-  margin-right: 40px;
-  height: 100%;
-  background-color: #BBE4F9;
-  border-radius: 1%;
-  padding: 10px;
-}
-
-div.recruiter_booked_appointment {
-  background-color: #F4F4F4;
-  border-style: solid;
-  border-color: #FFAA44;
-  border-width: thick;
-  height: 100px;
-  padding: 10px;
-  margin: 10px 5px 5px 2px;
-  border-radius: 3%;
-  font-size: 0.8em;
-}
-
-div.recruiter_available_appointment {
-  background-color: #f4f4f4;
-  border-style: solid;
-  border-color: #f4f4f4;
-  border-width: thick;
-  height: 100px;
-  padding: 10px;
-  margin: 10px 5px 5px 2px;
-  border-radius: 1%;
-  font-size: 0.8em;
-}
-
-div.recruiter_calendar {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 20px;
-  height: 100%;
-  border-radius: 1%;
-  padding: 0px;
-
-  a {
-    color: #222222;
-  }
-}
-
-body.devise-sessions.devise-sessions-new {
-  div.form{
-
-    padding: 15%;
-    font-family: Arial;
-
-    input.btn {
-      background-color: #427BFF;
-      margin-bottom: 10px;
-      margin-top: 5px;
-    }
-
-    a {
-      color: #427BFF;
-    }
-
-    h2 {
-      margin-top: 50px;
-      color: #427BFF;
-      font-size: 2em;
-    }
-  }
-}
-
-body.devise-registrations.devise-registrations-new {
-  div.form {
-    padding: 10% 10% 10% 15%;
-    font-family: Arial;
-    max-width: 750px;
-  }
-
-  h3 {
-    font-size: 1.5em;
-  }
-
-  div.content {
-    @include span-columns(12);
-  }
-
-  h2 {
-    margin-top: 100px;
-    font-size: 2em;
-    color: #427BFF;
-  }
-
-  div.form-actions {
-    margin-bottom: 15px;
-  }
-
-  input.btn {
-    background-color: #427BFF;
-  }
-}
-
-.appointments-edit {
-  padding: 20%;
-
-  div.content {
-    @include span-columns(12);
-
-    .logo {
-      @include span-columns(2 of 12);
-    }
-
-    .message {
-      @include span-columns(10 of 12);
-      margin-top: 20px;
-
-      h1 {
-        font-size: 2em;
-        color: #04A4EF;
-      }
-
-      a {
-        color: #04A4EF;
-      }
-
-      p {
-        font-size: 20px;
-      }
-
-      h2 {
-        margin-top: 20px;
-        font-style: italic;
-        color: #80BB05;
-        font-size: 20px;
-      }
-    }
   }
 }

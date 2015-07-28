@@ -1,0 +1,60 @@
+div.candidate {
+  font-family: Helvetica;
+  background-color: #f4f4f4;
+}
+
+div.candidate-calendar {
+  max-width: 705px;
+  margin-left: 3em;
+  margin-right: 3em;
+
+  p {
+    color: #f4f4f4;
+    font-size: 20px;
+  }
+
+  a {
+    color: #f4f4f4;
+    font-size: 20px;
+  }
+
+  .date {
+    background-color: #2F384F;
+    padding: 2px;
+    margin: 5px 5px 5px 2px;
+    border-radius: 1%;
+    color: #FFFFFF;
+  }
+
+  .candidate_date {
+    background-color: #0239B8;
+    padding: 2px;
+    margin: 50px 15px 15px 12px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: Helvetica;
+  }
+}
+
+div.booked_appointment {
+  height: 150px;
+  padding: 40px;
+  margin: 10px 15px 15px 12px;
+  background-color: #6996FF;
+}
+
+div.available_appointment {
+  height: 150px;
+  padding: 40px;
+  margin: 10px 15px 15px 12px;
+  background-color: #195EFE;
+}
+
+div.calendar {
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 100%;
+  background-color: #BBE4F9;
+  border-radius: 1%;
+  padding: 10px;
+}
