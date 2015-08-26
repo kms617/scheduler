@@ -1,5 +1,5 @@
 <div class="logo">
-<%= image_tag('logo.png') %>
+<%= image_tag('logo2.png') %>
 </div>
 <div class="message">
 <%= simple_form_for @appointment, method: :patch do |f| %>
@@ -7,7 +7,7 @@
       <% @appointment.booked = true %>
       <% @appointment.user = current_user %>
       <% @appointment.save %>
-      <h1>It's yours!</h1>
+      <h1>It's yours.</h1>
       <p>We've reserved <%= @appointment.scheduled_time.strftime("%B %d")%>th at  <%=@appointment.scheduled_time.strftime("%l:%M %P")%>
         <br>just for you.</p>
 <% end %>

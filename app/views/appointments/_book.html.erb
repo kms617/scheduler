@@ -3,7 +3,7 @@
       <% appointment.booked = true %>
       <% appointment.user = current_user %>
       <% appointment.save %>
-      <h1>It's yours!</h1>
+      <h1>Thank You</h1>
       <p><%= appointment.scheduled_time.strftime("%A, %B %d")%>th at  <%appointment.scheduled_time.strftime("%l:%M% P")%>
         has been booked for you!</p>
 <% end %>

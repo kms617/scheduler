@@ -27,12 +27,13 @@ div.candidate-calendar {
   }
 
   .candidate_date {
-    background-color: #0239B8;
+    background-color: #6E9082;
     padding: 2px;
     margin: 50px 15px 15px 12px;
     color: #FFFFFF;
     font-size: 18px;
     font-family: Helvetica;
+    border-radius: 3px;
   }
 }
 
@@ -40,14 +41,16 @@ div.booked_appointment {
   height: 150px;
   padding: 40px;
   margin: 10px 15px 15px 12px;
-  background-color: #6996FF;
+  background-color: #446DA4;
+  border-radius: 3px;
 }
 
 div.available_appointment {
   height: 150px;
   padding: 40px;
   margin: 10px 15px 15px 12px;
-  background-color: #195EFE;
+  background-color: #618EC5;
+  border-radius: 3px;
 }
 
 div.calendar {
